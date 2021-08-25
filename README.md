@@ -1,5 +1,5 @@
 # Turing-Machine-to-Cyclic-Tag
-Compiles a Turing machine to a Cyclic tag system.
+Compiles a Turing machine to a cyclic tag system.
 
 This code is based off of an algorithm discribed here:
 
@@ -13,6 +13,8 @@ T . Neary, D . Woods, P-completeness of cellular automaton rule 110, Lecture Not
 and also based of some code from here:
 
 S . Wolfram, A  New  Kind  of  Science, Champaign, IL: Wolfram Media, Inc ., 2002 pp . 1113.*)
+
+Unlike a different algorithm for compiling from a Turing machine to a cyclic tag system, this one nicely avoids a step involving compiling to unary.
 
 It all runs in the Wolfram Language / Mathematica.
 
