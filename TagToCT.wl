@@ -23,7 +23,7 @@ v[l_List, k_Integer] := Flatten[u[#, k]& /@ l]
 Tag1ToCTI[{n_Integer, subs:{(_Integer -> {___Integer})...}}] :=
     With[{k = Length[subs]},
         Join[
-			ResourceFunction["ParallelMapMonitored"][
+			ParallelMap[
 				v[Last[#], k]&, 
 				SortBy[subs, First]], 
 			Table[{}, {k (n - 1)}]]]
@@ -44,7 +44,7 @@ intReplacer[symbols_List] :=
 
 tag1RuleToInt[subs_List] :=
     With[{replacer = intReplacer[getTagSymbols[subs]]},
-        ResourceFunction["ParallelMapMonitored"][tag1RuleToIntPart[#, replacer]&, subs]]
+        ParallelMap[tag1RuleToIntPart[#, replacer]&, subs]]
 
 Tag1ToCT[{n_Integer, subs:{(_ -> _List)...}}] := Tag1ToCTI[{n, tag1RuleToInt[subs]}]
 
