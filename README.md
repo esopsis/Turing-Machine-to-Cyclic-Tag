@@ -26,3 +26,4 @@ or by using the free Wolfram Engine as described here:
 
 https://mathematica.stackexchange.com/questions/198839/how-to-add-a-front-end-to-the-free-wolfram-engine
 
+Here is a page describing some more about how it all works: https://community.wolfram.com/groups/-/m/t/3290282?p_p_auth=fq8KkWKK
